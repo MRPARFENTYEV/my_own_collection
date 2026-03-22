@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Your Name
+  description: Role to create files using custom module
+  company: Your Company
+  license: GPL-3.0
+  min_ansible_version: 2.9
+  galaxy_tags:
+    - file
+    - creation
+    - text
+dependencies: []

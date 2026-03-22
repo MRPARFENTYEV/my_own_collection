@@ -1,0 +1,13 @@
+---
+- name: Test create_file role
+  hosts: localhost
+  gather_facts: no
+  vars:
+    file_path: /tmp/role_test_file.txt
+    file_content: |
+      Content from role execution
+      Line 2: This is a test
+      Line 3: Created by custom module
+      Line 4: via Ansible role
+  roles:
+    - role: create_file

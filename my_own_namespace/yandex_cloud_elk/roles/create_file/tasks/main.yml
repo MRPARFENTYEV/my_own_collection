@@ -1,0 +1,21 @@
+---
+- name: Create file using my_own_module
+  my_own_namespace.yandex_cloud_elk.my_own_module:
+    path: "{{ file_path }}"
+    content: "{{ file_content }}"
+  register: result
+
+- name: Display result
+  debug:
+    var: result
+
+- name: Display file content
+  command: cat "{{ file_path }}"
+  register: file_content
+  changed_when: false
+  when: display_content | default(true)
+
+- name: Show file content
+  debug:
+    var: file_content.stdout_lines
+  when: display_content | default(true)

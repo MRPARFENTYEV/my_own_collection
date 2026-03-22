@@ -1,0 +1,10 @@
+# Ignore ansible subdirectory
+ansible/
+
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore Python cache
+__pycache__/
+*.pyc
